@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Rain's slonksite" />
+		<meta
+			name="keywords"
+			content="slonkazoid, slonking, slonk.ing, Rain, rust blazingly fast, bingus, webdev, cybersecurity"
+		/>
+		<meta property="og:title" content="slonksite" />
+		<meta property="og:description" content="Rain's slonksite" />
+		<meta property="og:url" content="https://slonk.ing/" />
+		<meta property="og:image" content="https://slonk.ing/img/favicon.png" />
+		<title>Rain's slonksite</title>
+		<link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<main>
+			<h1>identity</h1>
+			<p><a href="/">back to home</a></p>
+			<p>
+				aggregation of my current cryptographic keys, along with a log of changes, and
+				proofs of identity
+			</p>
+
+			<fieldset id="ssh">
+				<legend>ssh</legend>
+				current:
+				<code
+					>ssh-ed25519
+					AAAAC3NzaC1lZDI1NTE5AAAAIHVWgaeL8f7Rwh4WzvqJ5DWG9c7wwjpHG5tsOzF7yVVe
+					slonkazoid</code
+				><br />
+				<a href="id_slonkazoid.pub" download>download</a><br />
+				<details>
+					<summary>changelog</summary>
+					<pre><code>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+date: 2024-04-19T16:51:00+03:00
+
+i am switching over to the following key:
+    ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHVWgaeL8f7Rwh4WzvqJ5DWG9c7wwjpHG5tsOzF7yVVe slonkazoid
+i will also be using that key from now on
+-----BEGIN PGP SIGNATURE-----
+
+iJAEARYKADgWIQRNbVmTcxzpawITTQicUfMHL40RogUCZiJ4EhocYWxpZnVya2Fu
+eWlsZGl6QGdtYWlsLmNvbQAKCRCcUfMHL40RotntAP97O+rt+w2w8dCT+ov9sJ14
+9FvjPR/IbLvabq7j9bZRFwEAomVj/b4ooZvdwu73VNuXFM0QL1jlABMhHjM//Y3U
+1wo=
+=z3ba
+-----END PGP SIGNATURE-----</code></pre>
+				</details>
+			</fieldset>
+			<br />
+			<fieldset id="git">
+				<legend>git</legend>
+				i sign my commits and such with this key<br />
+				current:
+				<code
+					>ssh-ed25519
+					AAAAC3NzaC1lZDI1NTE5AAAAIKllnu5GdP+X5TeMYxzwsEvtvi4Sk+NhT8BBjzYXb/xW
+					slonkazoid</code
+				><br />
+				<a href="git.pub" download>download</a><br />
+				<details>
+					<summary>changelog</summary>
+					<pre><code>date: 2024-04-21T17:40:00+03:00
+
+this is my git commit signing key:
+    ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKllnu5GdP+X5TeMYxzwsEvtvi4Sk+NhT8BBjzYXb/xW slonkazoid
+-----BEGIN SSH SIGNATURE-----
+U1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgdVaBp4vx/tHCHhbO+onkNYb1zv
+DCOkcbm2w7MXvJVV4AAAAFcHJvb2YAAAAAAAAABnNoYTUxMgAAAFMAAAALc3NoLWVkMjU1
+MTkAAABAI5zpmJF37xht6StRcKYDhErRM2di3+SzM9imPKEid1hp8G4zoH169XxVRufdHe
+RixXPm3hqyb263cACNhzLKCQ==
+-----END SSH SIGNATURE-----</code></pre>
+				</details>
+			</fieldset>
+			<br />
+			<fieldset id="pgp">
+				<legend>pgp</legend>
+				current: <code>30DDF657DC25EF06FDDCD9B229DFCF2217C06A0A</code> @
+				<a
+					href="https://keys.openpgp.org/vks/v1/by-fingerprint/30DDF657DC25EF06FDDCD9B229DFCF2217C06A0A"
+					>keys.openpgp.org</a
+				><br />
+				<a
+					href=".well-known/openpgpkey/hu/no67q75f6onergjisn8pwm575e3fga5i"
+					download="slonkazoid.asc"
+					>download</a
+				>
+			</fieldset>
+		</main>
+		<footer>rsa is dead, long live ed25519</footer>
+	</body>
+</html>
