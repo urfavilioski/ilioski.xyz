@@ -1,0 +1,248 @@
+* {
+  user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+body {
+  background: linear-gradient(270deg, #000000, #0f0f0f, #000000);
+  background-size: 600% 600%;
+  animation: backgroundShift 20s ease infinite;
+  opacity: 0;
+  transition: opacity 2.5s ease;
+}
+
+body.loaded {
+  opacity:1;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+}
+
+.container {
+  text-align: center;
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    #b3d9ff,
+    #f9c5d1,
+    #ffffff,
+    #f9c5d1,
+    #b3d9ff
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: waveGradient 5s linear infinite;
+  user-select: none;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.social {
+  margin-top: -10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes waveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes backgroundShift {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.icon {
+  height: 64px;
+  width: auto;
+  animation: waveGradient 5s linear infinite;
+  filter: drop-shadow(0 4px 15px rgba(185, 197, 255, 0.6));
+  transition: transform 0.3s ease, filter 0.3s ease;
+  vertical-align: middle;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 6px 20px rgba(249, 197, 209, 0.8));
+}
+
+.sonce-icon {
+  height: 300px;
+  margin-bottom: -30px;
+}
+
+.sonce-icon:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 6px 20px rgba(249, 197, 209, 0.8));
+}
+
+.github-icon {
+  transform: scale(0.8);
+  transform-origin: center;
+  margin-left: -4px;
+}
+
+.github-icon:hover {
+  transform: scale(0.9);
+  filter: drop-shadow(0 6px 20px rgba(249, 197, 209, 0.8));
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 10px 16px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 1;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.discord-icon {
+  height: 56px;
+  width: auto;
+  transform: scale(1);
+  transform-origin: center;
+}
+
+.discord-icon:hover {
+ transform: scale(1.1);
+}
+
+.spotify-icon {
+  height: 48px;
+  width: auto;
+  transform: scale(1);
+  transform-origin: center;
+  margin-left: 8px;
+}
+
+.spotify-icon:hover {
+ transform: scale(1.1);
+}
+
+.title-small {
+  font-size: 1rem;
+  font-weight: bold;
+  background: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: inherit;
+  margin-bottom: -20px;
+  margin-top: -15px;
+  font-family: "Hack", "Hack Nerd Font", "JetBrains Mono", "JetBrainsMono Nerd Font", monospace,sans-serif;
+}
+
+.typewriter {
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    #b3d9ff,
+    #f9c5d1,
+    #ffffff,
+    #f9c5d1,
+    #b3d9ff
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: waveGradient 5s linear infinite;
+  text-align: center;
+  }
+
+  #typewriter-text::after {
+    content: "|";
+    animation: blink 1s step-end infinite;
+  }
+
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    background: linear-gradient(270deg, #000000, #0f0f0f, #000000);
+    animation: backgroundShift 20s ease infinite;
+    background-size: 600% 600%;
+  }
