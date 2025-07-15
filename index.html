@@ -1,203 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ILIOSKI //</title>
   <meta name="description" content="ILIOSKI //" />
   <meta name="keywords" content="ilioski, ilioski.xyz, webdev, cybersecurity, it" />
+  <title>ilioski.xyz</title>
+  <script src="titles.js"></script>
   <meta property="og:title" content="ilioski.xyz" />
   <meta property="og:description" content="ILIOSKI //" />
   <meta property="og:url" content="https://ilioski.xyz" />
   <link rel="shortcut icon" href="lib/sonce_boja.png" type="image/png" />
-
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      background-color: black;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      color: white;
-    }
-
-    .container {
-      text-align: center;
-      font-size: 4rem;
-      line-height: 1.2;
-      font-weight: bold;
-      background: linear-gradient(
-        90deg,
-        #b3d9ff,
-        #f9c5d1,
-        #ffffff,
-        #f9c5d1,
-        #b3d9ff
-      );
-      background-size: 200% 100%;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
-      animation: waveGradient 5s linear infinite;
-      user-select: none;
-      width: 100%;
-      max-width: 600px;
-      margin-bottom: 20px;
-    }
-
-    .social {
-      margin-top: -15px;
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    @keyframes waveGradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      100% {
-        background-position: 200% 50%;
-      }
-    }
-
-    .icon {
-      height: 64px;
-      width: auto;
-      animation: waveGradient 5s linear infinite;
-      filter: drop-shadow(0 4px 15px rgba(185, 197, 255, 0.6));
-      transition: transform 0.3s ease, filter 0.3s ease;
-      vertical-align: middle;
-    }
-
-    .icon:hover {
-      transform: scale(1.1);
-      filter: drop-shadow(0 6px 20px rgba(249, 197, 209, 0.8));
-    }
-	
-	.sonce-icon {
-      height: 300px;
-	  margin-bottom: -30px;
-    }
-
-    .sonce-icon:hover {
-      transform: scale(1.1);
-      filter: drop-shadow(0 6px 20px rgba(249, 197, 209, 0.8));
-    }
-
-    .github-icon {
-      transform: scale(0.8);
-      transform-origin: center;
-	  margin-left: -4px;
-    }
-
-    .github-icon:hover {
-      transform: scale(0.9);
-      filter: drop-shadow(0 6px 20px rgba(249, 197, 209, 0.8));
-    }
-
-    .tooltip {
-      position: relative;
-      display: inline-block;
-    }
-
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      width: max-content;
-      background-color: rgba(0, 0, 0, 0.8);
-      color: #fff;
-      text-align: center;
-      padding: 10px 16px;
-      border-radius: 8px;
-      position: absolute;
-      bottom: 110%;
-      left: 50%;
-      transform: translateX(-50%);
-      white-space: nowrap;
-      z-index: 1;
-      font-size: 1rem;
-      opacity: 0;
-      transition: opacity 0.2s ease;
-    }
-
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-    }
-	
-	.discord-icon {
-	  height: 56px; /* slightly smaller than the Instagram icon */
-	  width: auto;
-	  transform: scale(1);
-	  transform-origin: center;
-	}
-
-	.discord-icon:hover {
-	  transform: scale(1.1);
-	}
-	
-	.spotify-icon {
-	  height: 48px;
-	  width: auto;
-	  transform: scale(1);
-	  transform-origin: center;
-	  margin-left: 8px;
-	}
-	
-	.spotify-icon:hover {
-	  transform: scale(1.1);
-	}
-	
-	.title-small {
-	  font-size: 1rem;
-	  font-weight: bold;
-	  background: inherit;
-	  background-clip: text;
-	  -webkit-background-clip: text;
-	  color: transparent;
-	  -webkit-text-fill-color: transparent;
-	  animation: inherit;
-	  margin-bottom: -20px;
-	  margin-top: -15px;
-	  font-family: "Hack", "Hack Nerd Font", "JetBrains Mono", "JetBrainsMono Nerd Font", monospace,sans-serif;
-	}
-
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<img class="icon sonce-icon" src="lib/sonce_boja.png" />
-
-<script>
-  function updateDateTime() {
-	const now = new Date();
-
-	const currentDateTime = now.toLocaleString('en-GB', {
-		timeZone: 'Europe/Vienna',
-	});
-
-	const cleaned = currentDateTime.replace(",", "");
-	document.querySelector('#time').textContent = cleaned + ' in vienna';
-  }
-
-  setInterval(updateDateTime, 1000);
-</script>
-
-<div class="container">
-    Willkommen<br />
-    ilioski.xyz
-	<div class="title-small"><p id="time"></p></div>
-</div>
-
-  <div class="social">
+  <script src="main.js"></script>
+  <div id="particles-js"></div>
+  <img class="icon sonce-icon" src="lib/sonce_boja.png" />
+  <div class="container">
+    <div class="typewriter">
+      <span id="typewriter-text"></span><br />
+      ilioski.xyz
+    </div>
+    <div class="title-small"><p id="time"></p></div>
+  </div>
+  <div class="social glass-card">
     <!-- Instagram -->
     <a href="https://instagram.com/ilioskifi" target="_blank" aria-label="Instagram">
-      <svg class="icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <svg class="icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="ig-gradient" x1="0%" y1="0%" x2="200%" y2="0%">
             <stop offset="0%" stop-color="#b3d9ff" />
@@ -223,35 +51,35 @@
       </svg>
     </a>
 
-    <!-- Discord (clean glyph version) -->
-	<div class="tooltip">
-	  <svg class="icon discord-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-		<defs>
-		  <linearGradient id="dc-gradient" x1="0%" y1="0%" x2="200%" y2="0%">
-			<stop offset="0%" stop-color="#b3d9ff" />
-			<stop offset="50%" stop-color="#f9c5d1" />
-			<stop offset="100%" stop-color="#b3d9ff" />
-		  </linearGradient>
-		</defs>
-		<path fill="url(#dc-gradient)" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.0371c-1.6018.3566-3.1508.9252-4.8852 1.5152a.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.8731.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0312-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
-	  </svg>
-	  <div class="tooltiptext"><b>ilioski</b></div>
-	</div>
-	
-	<!-- Spotify (SimpleIcons official glyph) -->
-	<a href="https://open.spotify.com/user/31eak34sdhzpdalrlm74oe7wdvku?si=GOtqEQadT4iJE9RvkLDa3g" target="_blank" aria-label="Spotify">
-	  <svg class="icon spotify-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-		<defs>
-		  <linearGradient id="sp-gradient" x1="0%" y1="0%" x2="200%" y2="0%">
-			<stop offset="0%" stop-color="#b3d9ff"/>
-			<stop offset="50%" stop-color="#f9c5d1"/>
-			<stop offset="100%" stop-color="#b3d9ff"/>
-		  </linearGradient>
-		</defs>
-		<path fill="url(#sp-gradient)" d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.34 17.33a.75.75 0 01-1.03.25c-2.81-1.72-6.35-2.10-10.53-1.14a.75.75 0 11-.34-1.46c4.64-1.08 8.65-.64 11.81 1.33a.75.75 0 01.25 1.02zm1.47-3.05a.94.94 0 01-1.28.31c-3.22-1.97-8.11-2.54-11.89-1.38a.94.94 0 01-.54-1.79c4.37-1.30 9.77-.67 13.49 1.56a.93.93 0 01.30 1.30zm.15-3.25c-3.40-1.69-9.15-1.77-12.36-0.80a1.13 1.13 0 01-.64-2.15c3.83-1.14 10.29-1.05 14.40 1.69a1.13 1.13 0 01-1.017 2.001z"/>
-	  </svg>
-	</a>
+    <!-- Discord -->
+    <div class="tooltip">
+      <svg class="icon discord-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+         <linearGradient id="dc-gradient" x1="0%" y1="0%" x2="200%" y2="0%">
+            <stop offset="0%" stop-color="#b3d9ff" />
+            <stop offset="50%" stop-color="#f9c5d1" />
+            <stop offset="100%" stop-color="#b3d9ff" />
+         </linearGradient>
+        </defs>
+        <path fill="url(#dc-gradient)" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.0371c-1.6018.3566-3.1508.9252-4.8852 1.5152a.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.8731.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0312-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
+      </svg>
+      <div class="tooltiptext"><b>ilioski</b></div>
+    </div>
 
+    <!-- Spotify -->
+    <a href="https://open.spotify.com/user/31eak34sdhzpdalrlm74oe7wdvku?si=GOtqEQadT4iJE9RvkLDa3g" target="_blank" aria-label="Spotify">
+      <svg class="icon spotify-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sp-gradient" x1="0%" y1="0%" x2="200%" y2="0%">
+            <stop offset="0%" stop-color="#b3d9ff"/>
+            <stop offset="50%" stop-color="#f9c5d1"/>
+            <stop offset="100%" stop-color="#b3d9ff"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#sp-gradient)" d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.34 17.33a.75.75 0 01-1.03.25c-2.81-1.72-6.35-2.10-10.53-1.14a.75.75 0 11-.34-1.46c4.64-1.08 8.65-.64 11.81 1.33a.75.75 0 01.25 1.02zm1.47-3.05a.94.94 0 01-1.28.31c-3.22-1.97-8.11-2.54-11.89-1.38a.94.94 0 01-.54-1.79c4.37-1.30 9.77-.67 13.49 1.56a.93.93 0 01.30 1.30zm.15-3.25c-3.40-1.69-9.15-1.77-12.36-0.80a1.13 1.13 0 01-.64-2.15c3.83-1.14 10.29-1.05 14.40 1.69a1.13 1.13 0 01-1.017 2.001z"/>
+      </svg>
+    </a>
   </div>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script src="partikli.js"></script>
 </body>
-</html>
